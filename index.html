@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehrwertsteuerrechner</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <h1>
+        Mehrwertsteuerrechner
+    </h1>
+    <fieldset>
+        <label for="what">Was soll berechnet werden?</label>
+        <form onsubmit="return false" name="what" id="what">
+            <input type="radio" name="choice" id="toGross">
+            <label for="toGross">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label><br>
+            <input type="radio" name="choice" id="minusMwst" checked="checked">
+            <label for="minusMwst">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+        </form>
+        <label for="tax">Welcher Mehrwertsteuersatz soll verwendet werden?</label>
+        <form onsubmit="return false" name="tax" id="tax">
+            <input type="radio" name="choice" id="19P" checked="checked">
+            <label for="19P">19%</label>
+            <input type="radio" name="choice" id="7P">
+            <label for="7P">7%</label>
+        </form>
+        <label for="amount">Betrag in €:</label>
+        <form onsubmit="return false" name="amount" id="amount">
+            <input type="number" name="input" id="input"><br>
+            <input type="button" value="Berechnen" id="calcButton" onclick="calc()">
+        </form>
+        <form onsubmit="return false" id="resultSection">
+            <label for="tax">Mehrwertsteueranteil:</label>
+            <p id="taxResult"></p>
+            <label for="result" id="resultString">Betrag:</label>
+            <p id="result"></p>
+        </form>
+    </fieldset>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
