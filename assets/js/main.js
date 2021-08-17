@@ -11,13 +11,13 @@ function calc() {
     if (toGross) {
         resultString.innerHTML = "Brutto-Betrag:"
         endResult = (inputValue * multiplier).toFixed(2)
-        result.innerHTML = endResult
-        taxResult.innerHTML = (endResult - inputValue).toFixed(2)
+        result.innerHTML = endResult + " €"
+        taxResult.innerHTML = (endResult - inputValue).toFixed(2) + " €"
     }
     else {
         resultString.innerHTML = "Netto-Betrag:"
         endResult = (inputValue / multiplier).toFixed(2)
-        result.innerHTML = endResult
-        taxResult.innerHTML = (inputValue - endResult).toFixed(2)
+        result.innerHTML = endResult + " €"
+        taxResult.innerHTML = (inputValue - endResult).toFixed(2) + " €"
     }
 }
